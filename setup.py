@@ -6,7 +6,7 @@ setup(
                            "NER/AutoProcessor/Sentence/*.pyx"],
                           compiler_directives={'language_level': "3"}),
     name='NlpToolkit-NER-Cy',
-    version='1.0.0',
+    version='1.0.1',
     packages=['NER', 'NER.AutoProcessor', 'NER.AutoProcessor.Sentence', 'NER.AutoProcessor.ParseTree'],
     package_data={'NER.AutoProcessor.ParseTree': ['*.pxd', '*.pyx', '*.c', '*.py'],
                   'NER.AutoProcessor.Sentence': ['*.pxd', '*.pyx', '*.c', '*.py']},
@@ -14,5 +14,6 @@ setup(
     license='',
     author='olcaytaner',
     author_email='olcay.yildiz@ozyegin.edu.tr',
-    description='NER library'
+    description='NER library',
+    install_requires = ['NlpToolkit-AnnotatedSentence-Cy', 'NlpToolkit-AnnotatedTree-Cy']
 )
