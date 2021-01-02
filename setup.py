@@ -10,7 +10,7 @@ setup(
     packages=['NER', 'NER.AutoProcessor', 'NER.AutoProcessor.Sentence', 'NER.AutoProcessor.ParseTree'],
     package_data={'NER.AutoProcessor.ParseTree': ['*.pxd', '*.pyx', '*.c', '*.py'],
                   'NER.AutoProcessor.Sentence': ['*.pxd', '*.pyx', '*.c', '*.py']},
-    url='',
+    url='https://github.com/StarlangSoftware/NER-Cy',
     license='',
     author='olcaytaner',
     author_email='olcay.yildiz@ozyegin.edu.tr',
