@@ -8,6 +8,8 @@ setup(
     name='NlpToollkit-NER-Cy',
     version='1.0.0',
     packages=['NER', 'NER.AutoProcessor', 'NER.AutoProcessor.Sentence', 'NER.AutoProcessor.ParseTree'],
+    package_data={'NER.AutoProcessor.ParseTree': ['*.pxd', '*.pyx', '*.c', '*.py'],
+                  'NER.AutoProcessor.Sentence': ['*.pxd', '*.pyx', '*.c', '*.py']},
     url='',
     license='',
     author='olcaytaner',
