@@ -5,7 +5,7 @@ setup(
     ext_modules=cythonize(["NER/AutoProcessor/ParseTree/*.pyx",
                            "NER/AutoProcessor/Sentence/*.pyx"],
                           compiler_directives={'language_level': "3"}),
-    name='NlpToollkit-NER-Cy',
+    name='NlpToolkit-NER-Cy',
     version='1.0.0',
     packages=['NER', 'NER.AutoProcessor', 'NER.AutoProcessor.Sentence', 'NER.AutoProcessor.ParseTree'],
     package_data={'NER.AutoProcessor.ParseTree': ['*.pxd', '*.pyx', '*.c', '*.py'],
