@@ -59,3 +59,22 @@ Steps for opening the cloned project:
 * Choose `NER-Cy` file
 * Select open as project option
 * Couple of seconds, dependencies with Maven will be downloaded. 
+
+Detailed Description
+============
+
+## ParseTree
+
+In order to find the named entities in a parse tree, one uses autoNER method of the TreeAutoNER class.
+
+	parseTree = ...
+	turkishNer = TurkishTreeAutoNER(ViewLayerType.Turkish)
+	turkishNer.autoNER(parseTree)
+
+## Sentence
+
+In order to find the named entities in a simple sentence, one uses autoNER method of the SentenceAutoNER class.
+
+	sentence = ...
+	turkishNer = TurkishSentenceAutoNER()
+	turkishNer.autoNER(sentence)
