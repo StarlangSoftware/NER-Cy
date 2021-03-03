@@ -2,7 +2,7 @@ from Dictionary.Word cimport Word
 from MorphologicalAnalysis.MorphologicalTag import MorphologicalTag
 from AnnotatedSentence.AnnotatedSentence cimport AnnotatedSentence
 from AnnotatedSentence.AnnotatedWord cimport AnnotatedWord
-from AnnotatedSentence.AutoProcessor.AutoNER.AutoNER cimport SentenceAutoNER
+from NER.AutoProcessor.Sentence.SentenceAutoNER cimport SentenceAutoNER
 
 
 cdef class TurkishSentenceAutoNER(SentenceAutoNER):

@@ -6,7 +6,7 @@ setup(
                            "NER/AutoProcessor/Sentence/*.pyx"],
                           compiler_directives={'language_level': "3"}),
     name='NlpToolkit-NER-Cy',
-    version='1.0.1',
+    version='1.0.2',
     packages=['NER', 'NER.AutoProcessor', 'NER.AutoProcessor.Sentence', 'NER.AutoProcessor.ParseTree'],
     package_data={'NER.AutoProcessor.ParseTree': ['*.pxd', '*.pyx', '*.c', '*.py'],
                   'NER.AutoProcessor.Sentence': ['*.pxd', '*.pyx', '*.c', '*.py']},
