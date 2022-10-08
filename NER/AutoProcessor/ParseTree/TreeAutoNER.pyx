@@ -8,7 +8,7 @@ from AnnotatedTree.Processor.NodeDrawableCollector cimport NodeDrawableCollector
 
 cdef class TreeAutoNER(AutoNER):
 
-    cdef object secondLanguage
+    cdef object second_language
 
     cpdef autoDetectPerson(self, ParseTreeDrawable parseTree):
         pass
@@ -26,20 +26,20 @@ cdef class TreeAutoNER(AutoNER):
         pass
 
     def __init__(self, secondLanguage: ViewLayerType):
-        self.secondLanguage = secondLanguage
+        self.second_language = secondLanguage
 
     cpdef autoNER(self, ParseTreeDrawable parseTree):
-        cdef NodeDrawableCollector nodeDrawableCollector
-        cdef list leafList
-        cdef ParseNodeDrawable parseNode
+        cdef NodeDrawableCollector node_drawable_collector
+        cdef list leaf_list
+        cdef ParseNodeDrawable parse_node
         self.autoDetectPerson(parseTree)
         self.autoDetectLocation(parseTree)
         self.autoDetectOrganization(parseTree)
         self.autoDetectMoney(parseTree)
         self.autoDetectTime(parseTree)
-        nodeDrawableCollector = NodeDrawableCollector(parseTree.getRoot(), IsTransferable(self.secondLanguage))
-        leafList = nodeDrawableCollector.collect()
-        for parseNode in leafList:
-            if isinstance(parseNode, ParseNodeDrawable) and not parseNode.layerExists(ViewLayerType.NER):
-                parseNode.getLayerInfo().setLayerData(ViewLayerType.NER, "NONE")
+        node_drawable_collector = NodeDrawableCollector(parseTree.getRoot(), IsTransferable(self.second_language))
+        leaf_list = node_drawable_collector.collect()
+        for parse_node in leaf_list:
+            if isinstance(parse_node, ParseNodeDrawable) and not parse_node.layerExists(ViewLayerType.NER):
+                parse_node.getLayerInfo().setLayerData(ViewLayerType.NER, "NONE")
         parseTree.saveWithFileName()
