@@ -55,7 +55,7 @@ Video Lectures
 For Developers
 ============
 You can also see either [Python](https://github.com/starlangsoftware/NER-Py), [Java](https://github.com/starlangsoftware/NER),
-[C++](https://github.com/starlangsoftware/NER-CPP), [Swift](https://github.com/starlangsoftware/NER-Swift), [Js](https://github.com/starlangsoftware/NER-Js), or [C#](https://github.com/starlangsoftware/NER-CS) repository.
+[C++](https://github.com/starlangsoftware/NER-CPP), [Swift](https://github.com/starlangsoftware/NER-Swift), [Js](https://github.com/starlangsoftware/NER-Js), [Php](https://github.com/starlangsoftware/NER-Php), or [C#](https://github.com/starlangsoftware/NER-CS) repository.
 
 ## Requirements
 
